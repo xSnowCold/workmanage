@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 @Transactional
@@ -16,8 +15,13 @@ public class ExamService {
     @Autowired
     ExamRepository examRepository;
     //添加考试
-    public Exam addExam(Exam exam){
-        return examRepository.save(exam);
+    public String addExam(Exam exam){
+        if (isExam(exam)){
+            examRepository.save(exam);
+            return "添加考试信息成功";
+        }else {
+            return "考试时间地点冲突请检查";
+        }
     }
     //删除考试
     public void deleteExam(int id){
@@ -48,4 +52,22 @@ public class ExamService {
         return un;
     }
 
+    //判断同一时间地点考试是否重合
+    public boolean isExam(Exam isexam){
+        List<Exam> list = examRepository.findAll();
+        for(Exam exam:list){
+            if(!(exam.getSite().equals(isexam.getSite()))){
+                continue;
+            }else if(isexam.getBeginTime().equals(exam.getBeginTime())||isexam.getEndTime().equals(exam.getEndTime())){
+                return false;
+            }else if (isexam.getBeginTime().isAfter(exam.getBeginTime())&&isexam.getBeginTime().isBefore(exam.getEndTime())){
+                return false;
+            }else if(isexam.getEndTime().isAfter(exam.getBeginTime())&&isexam.getEndTime().isBefore(exam.getEndTime())){
+                return false;
+            }
+
+        }
+        return true;
+
+    }
 }
