@@ -18,6 +18,7 @@ public class ExamService {
     public String addExam(Exam exam){
         if (isExam(exam)){
             examRepository.save(exam);
+            examRepository.refresh(exam);
             return "添加考试信息成功";
         }else {
             return "考试时间地点冲突请检查";
@@ -63,6 +64,8 @@ public class ExamService {
             }else if (isexam.getBeginTime().isAfter(exam.getBeginTime())&&isexam.getBeginTime().isBefore(exam.getEndTime())){
                 return false;
             }else if(isexam.getEndTime().isAfter(exam.getBeginTime())&&isexam.getEndTime().isBefore(exam.getEndTime())){
+                return false;
+            }else if(isexam.getBeginTime().isBefore(exam.getBeginTime())&&isexam.getEndTime().isAfter(exam.getEndTime())){
                 return false;
             }
 

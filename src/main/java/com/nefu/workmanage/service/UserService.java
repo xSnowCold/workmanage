@@ -2,7 +2,6 @@ package com.nefu.workmanage.service;
 
 import com.nefu.workmanage.Repository.UserRepository;
 import com.nefu.workmanage.entity.User;
-import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +16,8 @@ public class UserService {
 
     //添加用户
     public User addUser(User user){
-        return userRepository.save(user);
+        userRepository.save(user);
+        return userRepository.refresh(user);
     }
     //查找用户
     public User findUser(int id){

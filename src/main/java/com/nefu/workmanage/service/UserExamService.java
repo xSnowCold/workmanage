@@ -13,6 +13,7 @@ public class UserExamService {
     UserExamRepository userExamRepository;
 
     public UserExam addUserExam(UserExam userExam){
-        return userExamRepository.save(userExam);
+        userExamRepository.save(userExam);
+        return userExamRepository.refresh(userExam);
     }
 }
