@@ -12,12 +12,12 @@ import java.util.List;
 @Transactional
 public class UserService {
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     //添加用户
     public User addUser(User user){
-        userRepository.save(user);
-        return userRepository.refresh(user);
+        return userRepository.save(user);
+       // return userRepository.refresh(user);
     }
     //查找用户
     public User findUser(int id){

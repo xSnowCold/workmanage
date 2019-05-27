@@ -10,10 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class UserExamService {
     @Autowired
-    UserExamRepository userExamRepository;
+   private UserExamRepository userExamRepository;
 
     public UserExam addUserExam(UserExam userExam){
-        userExamRepository.save(userExam);
-        return userExamRepository.refresh(userExam);
+        return userExamRepository.save(userExam);
+        //return userExamRepository.refresh(userExam);
     }
 }

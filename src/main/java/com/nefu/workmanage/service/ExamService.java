@@ -13,12 +13,12 @@ import java.util.List;
 @Transactional
 public class ExamService {
     @Autowired
-    ExamRepository examRepository;
+    private ExamRepository examRepository;
     //添加考试
     public String addExam(Exam exam){
         if (isExam(exam)){
             examRepository.save(exam);
-            examRepository.refresh(exam);
+            //examRepository.refresh(exam);
             return "添加考试信息成功";
         }else {
             return "考试时间地点冲突请检查";

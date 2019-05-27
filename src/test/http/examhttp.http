@@ -1,0 +1,17 @@
+###
+GET http://localhost:8080/api/exams
+
+###
+GET http://127.0.0.1:8080/api/users/1
+
+###
+POST http://127.0.0.1:8080/api/users
+Content-Type: application/json
+
+{
+  "userName": "spring",
+  "password": "445",
+  "detail": "708"
+}
+
+###
