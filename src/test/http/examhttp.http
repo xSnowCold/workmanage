@@ -2,16 +2,23 @@
 GET http://localhost:8080/api/exams
 
 ###
-GET http://127.0.0.1:8080/api/users/1
+GET http://127.0.0.1:8080/api/exams/UNDISTRIBUTED
 
 ###
-POST http://127.0.0.1:8080/api/users
+POST http://127.0.0.1:8080/api/exams
 Content-Type: application/json
 
 {
-  "userName": "spring",
-  "password": "445",
-  "detail": "708"
+  "subject": "职业素质教育",
+  "site": "丹青724",
+  "needNum": 3,
+  "beginTime": "2019-06-05 13:40",
+  "endTime": "2019-05-27 15:40",
+  "status": "DISTRIBUTED",
+  "insertTime": "2019-05-25T23:41:26"
 }
+
+###
+DELETE http://127.0.0.1:8080/api/exams/5
 
 ###

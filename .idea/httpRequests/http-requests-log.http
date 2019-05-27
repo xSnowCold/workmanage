@@ -1,3 +1,128 @@
+DELETE http://127.0.0.1:8080/api/exams/5
+
+<> 2019-05-27T103704.200.json
+
+###
+
+DELETE http://127.0.0.1:8080/api/exams/5
+
+###
+
+POST http://127.0.0.1:8080/api/exams
+Content-Type: application/json
+
+{
+  "subject": "职业素质教育",
+  "site": "丹青724",
+  "needNum": 3,
+  "beginTime": "2019-06-05 13:40",
+  "endTime": "2019-05-27 15:40",
+  "status": "DISTRIBUTED",
+  "insertTime": "2019-05-25T23:41:26"
+}
+
+<> 2019-05-27T102906.200.json
+
+###
+
+POST http://127.0.0.1:8080/api/exams
+Content-Type: application/json
+
+{
+  "subject": "职业素质教育",
+  "site": "丹青902",
+  "needNum": 3,
+  "beginTime": "2019-06-05 13:40",
+  "endTime": "2019-05-27 15:40",
+  "status": "DISTRIBUTED",
+  "insertTime": "2019-05-25T23:41:26"
+}
+
+<> 2019-05-27T102758.200.json
+
+###
+
+POST http://127.0.0.1:8080/api/exams
+Content-Type: application/json
+
+{
+  "subject": "职业素质教育",
+  "site": "丹青902",
+  "needNum": 3,
+  "beginTime": "2019-06-05 13:40",
+  "endTime": "2019-05-27 15:40",
+  "status": "DISTRIBUTED",
+  "insertTime": "2019-05-25T23:41:26"
+}
+
+<> 2019-05-27T102742.405.json
+
+###
+
+POST http://127.0.0.1:8080/api/exams
+Content-Type: application/json
+
+{
+  "subject": "职业素质教育",
+  "site": "丹青902",
+  "needNum": 3,
+  "beginTime": "2019-06-05 13:40",
+  "endTime": "2019-05-27 15:40",
+  "status": "DISTRIBUTED",
+  "insertTime": "2019-05-25T23:41:26"
+}
+
+<> 2019-05-27T102709.405.json
+
+###
+
+POST http://127.0.0.1:8080/api/exams/exam
+Content-Type: application/json
+
+{
+  "subject": "职业素质教育",
+  "site": "丹青902",
+  "needNum": 3,
+  "beginTime": "2019-06-05 13:40",
+  "endTime": "2019-05-27 15:40",
+  "status": "DISTRIBUTED",
+  "insertTime": "2019-05-25T23:41:26"
+}
+
+<> 2019-05-27T102613.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams/UNDISTRIBUTED
+
+<> 2019-05-27T101717.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams/undistributed
+
+<> 2019-05-27T101702.400.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams/undistribute
+
+<> 2019-05-27T101640.400.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams/0
+
+<> 2019-05-27T101611.400.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams/UNDISTRIBUTED
+
+<> 2019-05-27T101531.200.json
+
+###
+
 GET http://localhost:8080/api/exams
 
 <> 2019-05-27T100521.200.json
