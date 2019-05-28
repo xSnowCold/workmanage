@@ -18,7 +18,12 @@ public class UserTest {
 
     @Test
     public void addTest(){
-        userService.addUser(new User("2016214404"));
+        User user = new User();
+        user.setAccount("2017224410");
+        user.setPassword("999999");
+        user.setName("sk");
+
+        userService.addUser(user);
     }
     @Test
     public void modify(){

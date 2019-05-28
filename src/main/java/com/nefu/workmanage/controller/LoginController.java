@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 import java.util.Optional;
 
@@ -31,15 +32,18 @@ public class LoginController {
     @Autowired
     private EncryptorComponent encryptorComponent;
 
+    private HttpSession session;
     @PostMapping("/login")
     public void login(@RequestBody User user, HttpServletResponse response){
-        Optional.ofNullable(userService.findUser(user.getId()))
+        log.debug("{}", user.getAccount());
+        Optional.ofNullable(userService.findByAccount(user.getAccount()))
                 .ifPresentOrElse(u -> {
                     if(!passwordEncoder.matches(user.getPassword(),u.getPassword())){
                         throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
                     }
-                    Map map = Map.of("uid",u.getId(),"aid",u.getRole());
+                    Map map = Map.of("uid",u.getId(),"rid",u.getRole());
                     String token = encryptorComponent.encrypt(map);
+                    //session.setAttribute("user", map);
                     response.setHeader("token", token);
                     String role = null;
                     if(u.getRole() == User.roles.TEACHER){
@@ -51,6 +55,7 @@ public class LoginController {
                     if (u.getRole() == User.roles.SUPER){
                         role = SUPER_ROLE;
                     }
+                    response.setHeader("role", role);
                 },() -> {
                     throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
                 });
