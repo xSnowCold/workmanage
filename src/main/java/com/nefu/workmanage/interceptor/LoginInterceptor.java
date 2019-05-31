@@ -1,5 +1,6 @@
 package com.nefu.workmanage.interceptor;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.nefu.workmanage.component.EncryptorComponent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,15 +21,25 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                              Object handler)throws Exception{
-        Optional.ofNullable(request.getHeader("token"))
+        HttpSession session = request.getSession(false);
+        if(session!=null){
+            System.out.println(session.getId());
+            System.out.println(session.getAttribute("role"));
+            return true;
+        }else {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"未登录");
+        }
+        /*System.out.println((String)request.getSession(false).getAttribute("token"));
+
+        Optional.ofNullable((String)(request.getSession().getAttribute("token")))
                 .ifPresentOrElse(token -> {
                     var map = encryptorComponent.decrypt(token);
-                    request.setAttribute("uid", map.get("uid"));
-                    request.setAttribute("rid", map.get("rid"));
+                    request.getSession().setAttribute("uid", map.get("uid"));
+                    request.getSession().setAttribute("rid", map.get("rid"));
                 }, () ->{
                     throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"未登录");
                 });
-        return true;
+        return true;*/
     }
 
 

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
@@ -34,18 +35,38 @@ public class LoginController {
 
     private HttpSession session;
     @PostMapping("/login")
-    public void login(@RequestBody User user, HttpServletResponse response){
+    public Map login(@RequestBody User user, HttpServletRequest request){
+        session = request.getSession();
         log.debug("{}", user.getAccount());
-        Optional.ofNullable(userService.findByAccount(user.getAccount()))
+        User dbUser = userService.findByAccount(user.getAccount());
+        if(dbUser != null){
+            if(!passwordEncoder.matches(user.getPassword(),dbUser.getPassword())){
+                throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
+            }else {
+                session.setAttribute("user", dbUser);
+                session.setAttribute("role", dbUser.getRole());
+                return Map.of("role",dbUser.getRole());
+            }
+        }else {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
+        }
+        /*Optional.ofNullable(userService.findByAccount(user.getAccount()))
                 .ifPresentOrElse(u -> {
                     if(!passwordEncoder.matches(user.getPassword(),u.getPassword())){
                         throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
                     }
-                    Map map = Map.of("uid",u.getId(),"rid",u.getRole());
-                    String token = encryptorComponent.encrypt(map);
+                    *//*Map map = Map.of("uid",u.getId(),"rid",u.getRole());
+                    String token = encryptorComponent.encrypt(map);*//*
                     //session.setAttribute("user", map);
-                    response.setHeader("token", token);
-                    String role = null;
+                    request.getSession().setAttribute("user", u);
+                    request.getSession().setAttribute("role", u.getRole());
+
+                    System.out.println();
+
+
+                    Map.of("role",u.getRole());
+                   // response.setHeader("token", token);
+                   *//* String role = null;
                     if(u.getRole() == User.roles.TEACHER){
                         role = TEACHER_ROLE;
                     }
@@ -54,11 +75,12 @@ public class LoginController {
                     }
                     if (u.getRole() == User.roles.SUPER){
                         role = SUPER_ROLE;
-                    }
-                    response.setHeader("role", role);
+                    }*//*
+                    //request.getSession().setAttribute("role", role);
+                   // response.setHeader("role", role);
                 },() -> {
                     throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
-                });
+                });*/
 
     }
 }
