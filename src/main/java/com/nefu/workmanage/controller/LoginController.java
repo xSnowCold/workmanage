@@ -37,7 +37,6 @@ public class LoginController {
     @PostMapping("/login")
     public Map login(@RequestBody User user, HttpServletRequest request){
         session = request.getSession();
-        log.debug("{}", user.getAccount());
         User dbUser = userService.findByAccount(user.getAccount());
         if(dbUser != null){
             if(!passwordEncoder.matches(user.getPassword(),dbUser.getPassword())){

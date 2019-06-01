@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
@@ -31,5 +33,14 @@ public class UserTest {
         user.setTitle(User.titles.PROFESSOR);
 
         userService.modifyUser(user);
+    }
+    @Test
+    public void findAll(){
+        List<User> list = userService.findUser();
+        for(User user:list){
+            log.debug("{}", user.getAccount());
+        }
+
+
     }
 }

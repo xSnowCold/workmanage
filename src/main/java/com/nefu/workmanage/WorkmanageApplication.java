@@ -7,10 +7,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+
 import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
+
 public class WorkmanageApplication {
     @PostConstruct
     void started() {
@@ -19,6 +21,9 @@ public class WorkmanageApplication {
     public static void main(String[] args) {
         SpringApplication.run(WorkmanageApplication.class, args);
     }
+
+
+
 
     @Bean
     public PasswordEncoder getPasswordEncoder() {
