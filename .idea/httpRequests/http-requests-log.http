@@ -1,442 +1,837 @@
-POST http://localhost:8080/api/login
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 2}
+
+  ]
+
+<> 2019-06-15T064138.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T064116.200.json
+
+###
+
+POST http://localhost:8080/api/users/updateuser
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "id": 2,
+  "name": "薛瀚",
+  "account": "8888888",
+  "password": "111111",
+  "role": "SUPER",
+  "executeTimes": 4
+
 }
 
-<> 2019-06-01T101550.200.json
+<> 2019-06-15T064020.200.json
 
 ###
 
-GET http://localhost:8080/api/users
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
 
-<> 2019-06-01T095844.200.json
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T063454.200.json
 
 ###
 
-POST http://localhost:8080/api/login
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T063444.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T063146.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T063100.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T062743.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+
+    {"id": 10},{"id": 8},{"id": 9}
+
+  ]
+
+<> 2019-06-15T062551.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 10
+    }
+  ]
+
+<> 2019-06-15T062432.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 10
+    }
+  ]
+
+<> 2019-06-15T062412.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 10
+    }
+  ]
+
+<> 2019-06-15T061843.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T061744.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T061542.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T055926.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T055845.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T055829.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T055710.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T054931.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T054835.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+
+    {
+      "id": 11
+    }
+  ]
+
+<> 2019-06-15T054701.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T054432.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T054129.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T053832.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T053730.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T053433.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T053308.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T053121.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T052953.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T052209.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T052138.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/3
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T051926.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/2
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T051420.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/1
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T050408.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/
+Content-Type: application/json
+
+   [
+    {
+      "id": 6
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
+
+<> 2019-06-15T050357.404.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T050244.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T045836.200.json
+
+###
+
+POST http://127.0.0.1:8080/api/manager/addexam
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "subject": "职业素质教育",
+  "site": "丹青724",
+  "needNum": 3,
+  "beginTime": "2019-06-08 21:30:06",
+  "endTime": "2019-06-13 21:30:09"
+
 }
 
-<> 2019-06-01T095039.200.json
+<> 2019-06-15T044728.200.json
 
 ###
 
-GET http://localhost:8080/api/users
-
-<> 2019-06-01T094640.200.json
-
-###
-
-POST http://localhost:8080/api/login
+POST http://127.0.0.1:8080/api/manager/addexam
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "subject": "职业素质教育",
+  "site": "丹青724",
+  "needNum": 3,
+  "beginTime": "2019-06-08 21:30:06",
+  "endTime": "2019-06-13 21:30:09",
+
 }
 
-<> 2019-06-01T094544.200.json
+<> 2019-06-15T044650.400.json
 
 ###
 
-GET http://localhost:8080/api/users
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
 
-<> 2019-06-01T091301.200.json
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
 
-###
-
-GET http://localhost:8080/api/users
-
-<> 2019-06-01T090925.200.json
-
-###
-
-GET http://localhost:8080/api/users
-
-<> 2019-06-01T084611.200.json
-
-###
-
-GET http://localhost:8080/api/users
-
-<> 2019-06-01T084047.500.json
+<> 2019-06-15T044237.200.json
 
 ###
 
-GET http://localhost:8080/api/users
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
 
-<> 2019-06-01T083604.500.json
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T043940.200.json
 
 ###
 
-GET http://localhost:8080/api/users
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
 
-<> 2019-06-01T083545.401.json
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T043905.200.json
 
 ###
 
-GET http://localhost:8080/api/exams
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
 
-<> 2019-06-01T083353.401.json
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T041852.200.json
 
 ###
 
-POST http://localhost:8080/api/login
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T041622.200.json
+
+###
+
+POST http://localhost:8080/api/manager/addUserExam/4
+Content-Type: application/json
+
+   [
+    {
+      "id": 2,
+      "account": "2016214402"
+    },
+    {
+      "id": 3,
+      "account": "2016214403"
+    },
+    {
+      "id": 10,
+      "account": "2016214404"
+    }
+  ]
+
+<> 2019-06-15T041137.200.json
+
+###
+
+POST http://localhost:8080/api/users/updateuser
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "id": 2,
+  "name": "薛瀚",
+  "account": "19970515",
+  "password": "111111",
+  "role": "SUPER",
+  "executeTimes": 4
+
 }
 
-<> 2019-06-01T083346.200.json
+<> 2019-06-15T021508.200.json
 
 ###
 
-GET http://localhost:8080/api/exams
-
-<> 2019-06-01T082853.401.json
-
-###
-
-POST http://localhost:8080/api/login
+POST http://localhost:8080/api/users/updateuser
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "id": 2,
+  "name": "薛瀚",
+  "account": "2016214401",
+  "password": "111111",
+  "role": "SUPER",
+  "executeTimes": 4
+
 }
 
-<> 2019-06-01T082849.200.json
+<> 2019-06-15T021434.500.json
 
 ###
 
-POST http://localhost:8080/api/login
+POST http://localhost:8080/api/users/updateuser
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "id": 2,
+  "name": "薛瀚",
+  "account": "2016214401",
+  "password": "111111",
+  "role": "SUPER",
+  "executeTimes": 4,
+
 }
 
-<> 2019-06-01T081742.200.json
+<> 2019-06-15T021427.400.json
 
 ###
 
-GET http://localhost:8080/api/exams
-
-<> 2019-06-01T081206.401.json
-
-###
-
-POST http://localhost:8080/api/login
+POST http://localhost:8080/api/manager/addUserExam/4
 Content-Type: application/json
 
 {
-  "account": "2017224410",
-  "password": "999999"
+  "id": 2,
+  "name": "薛瀚",
+  "account": "2016214401",
+  "password": "111111",
+  "role": "SUPER",
+  "executeTimes": 4,
+
 }
 
-<> 2019-06-01T081203.200.json
+<> 2019-06-15T021338.400.json
 
 ###
 
-GET http://localhost:8080/api/exams
+GET http://localhost:8080/api/users/2
 
-<> 2019-06-01T081158.401.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-06-01T080600.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-06-01T080514.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T105859.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T105855.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T105802.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T105755.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T104956.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T104952.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T103827.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T103118.500.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T103111.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T102939.200.json
-
-###
-
-GET http://localhost:8080/api/users
-
-<> 2019-05-31T102926.500.json
-
-###
-
-GET http://localhost:8080/api/users
-
-<> 2019-05-31T102851.500.json
-
-###
-
-GET http://localhost:8080/api/users
-
-<> 2019-05-31T102549.500.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T102535.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T101715.401.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T101709.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T101618.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T101526.500.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T101337.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T101253.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T101201.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T100812.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T100507.200.json
-
-###
-
-GET http://localhost:8080/api/exams
-
-<> 2019-05-31T100406.500.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-<> 2019-05-31T095558.200.json
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
-
-###
-
-POST http://localhost:8080/api/login
-Content-Type: application/json
-
-{
-  "account": "2017224410",
-  "password": "999999"
-}
+<> 2019-06-15T021224.200.json
 
 ###
 

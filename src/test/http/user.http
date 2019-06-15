@@ -1,5 +1,24 @@
 ###
-GET http://localhost:8080/api/users
+GET http://localhost:8080/api/users/2
 
 ###
+GET http://localhost:8080/api/manager/recommendteacher
 
+###
+GET http://localhost:8080/api/super/managerList
+
+###
+POST http://localhost:8080/api/users/updateuser
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "薛瀚",
+  "account": "8888888",
+  "password": "111111",
+  "role": "SUPER",
+  "executeTimes": 4
+
+}
+
+###

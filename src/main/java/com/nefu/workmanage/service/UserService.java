@@ -23,27 +23,43 @@ public class UserService {
         return userRepository.save(user);
        // return userRepository.refresh(user);
     }
-    //查找用户
+
+    //按ID查找用户
     public User findUser(int id){
         return userRepository.findById(id).get();
     }
+    //查找全部用户
     public List<User> findUser(){
         return userRepository.findAll();
     }
+    //按账号查找用户
     public User findByAccount(String account){
         return userRepository.findByAccount(account);
     }
-    //删除用户
-    public void deleteUser(int id){
-        userRepository.deleteById(id);
+    //按角色查找全部用户
+    public List<User> findByRole(User.roles role){
+        return userRepository.roleList(role);
     }
-    public void deleteUser(User user){
+    //删除用户
+    public boolean deleteUser(int id){
+        userRepository.deleteById(id);
+        return true;
+    }
+    public boolean deleteUser(User user){
         userRepository.delete(user);
+        return true;
     }
     //修改用户
     public User modifyUser(User user){
-        userRepository.deleteById(user.getId());
-        userRepository.flush();
-        return userRepository.save(user);
+        User /*user1 = userRepository.findById(user.getId()).get();*/
+        user1 = user;
+        String password = passwordEncoder.encode(user.getPassword());
+        user1.setPassword(password);
+        return userRepository.save(user1);
     }
+    //按监考次数升序查询全部用户
+    public List<User> ascExecuteUser(){
+      return   userRepository.ascExecute();
+    }
+
 }

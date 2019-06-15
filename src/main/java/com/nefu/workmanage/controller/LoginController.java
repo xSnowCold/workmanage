@@ -44,7 +44,7 @@ public class LoginController {
             }else {
                 session.setAttribute("user", dbUser);
                 session.setAttribute("role", dbUser.getRole());
-                return Map.of("role",dbUser.getRole());
+                return Map.of("currentAuthority",dbUser.getRole(),"status","ok","type",dbUser.getAccount());
             }
         }else {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");

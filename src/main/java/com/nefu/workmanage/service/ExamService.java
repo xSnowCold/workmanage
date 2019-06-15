@@ -37,16 +37,16 @@ public class ExamService {
     }
     //修改考试
     public Exam modifyExam(Exam exam){
-        examRepository.findById(exam.getId());
-        examRepository.flush();
-        return examRepository.save(exam);
+        Exam exam1 = examRepository.findById(exam.getId()).get();
+        exam1 = exam;
+        return examRepository.save(exam1);
     }
     //获取考试状态分列表
-    public List<Exam> findExamStatus(Exam.stat status){
+    public List<Exam> findExamStatus(int status){
         List<Exam> list = examRepository.findAll();
         List<Exam> un = new ArrayList<>();
         for(Exam exam:list){
-            if(exam.getStatus().equals(status)){
+            if(exam.getStatus()==(status)){
               un.add(exam);
             }
         }

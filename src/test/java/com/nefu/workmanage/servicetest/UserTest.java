@@ -21,19 +21,19 @@ public class UserTest {
     @Test
     public void addTest(){
         User user = new User();
-        user.setAccount("2018224456");
-        user.setPassword("101010");
-        user.setName("sk");
+        user.setAccount("super");
+        user.setPassword("222222");
+        user.setRole(User.roles.SUPER);
 
         userService.addUser(user);
     }
-    @Test
+    /*@Test
     public void modify(){
         User user = userService.findUser(1);
         user.setTitle(User.titles.PROFESSOR);
 
         userService.modifyUser(user);
-    }
+    }*/
     @Test
     public void findAll(){
         List<User> list = userService.findUser();

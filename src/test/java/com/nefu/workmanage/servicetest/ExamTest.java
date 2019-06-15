@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import static com.nefu.workmanage.entity.Exam.FINISH;
 
 
 @RunWith(SpringRunner.class)
@@ -42,7 +43,7 @@ public class ExamTest {
     }
     @Test
     public void stat(){
-        List<Exam> list  = examService.findExamStatus(Exam.stat.FINISH);
+        List<Exam> list  = examService.findExamStatus(FINISH);
         for (Exam exam:list)
             log.debug("{}",exam);
     }

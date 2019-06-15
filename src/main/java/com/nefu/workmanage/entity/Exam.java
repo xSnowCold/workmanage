@@ -15,20 +15,23 @@ import java.time.LocalDateTime;
 @Entity
 @ToString
 public class Exam {
-    public enum stat{
+    public static final int UNDISTRIBUTED = 0;
+    public static final int DISTRIBUTED = 1;
+    public static final int FINISH = 2;
+    /*public enum stat{
         UNDISTRIBUTED,DISTRIBUTED,FINISH
-    }
+    }*/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String subject;
     private String site;
     private int needNum;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime beginTime;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime endTime;
-    private stat status = stat.UNDISTRIBUTED;
+    private int status = UNDISTRIBUTED;
     @Column(columnDefinition = "TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP",
             insertable = false
             , updatable = false)

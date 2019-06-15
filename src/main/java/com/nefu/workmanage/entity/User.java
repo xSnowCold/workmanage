@@ -17,7 +17,7 @@ public class User {
         TEACHER,MANAGER,SUPER
     }
     public enum titles{
-        LECTURER,ASSOCIATEPROFESSOR,PROFESSOR
+        讲师,副教授,教授
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +28,7 @@ public class User {
     private String tel;
     @Column(unique = true,nullable = false)
     private String account;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+
     private String password;
     private roles role = roles.TEACHER;
     private int executeTimes = 0;

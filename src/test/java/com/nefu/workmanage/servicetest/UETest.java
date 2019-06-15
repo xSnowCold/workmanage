@@ -21,11 +21,17 @@ public class UETest {
     UserService userService;
     @Autowired
     ExamService examService;
-    @Test
+  /*  @Test
     public void add(){
         UserExam userExam = new UserExam();
         userExam.setUser(userService.findUser(2));
         userExam.setExam(examService.findAExam(1));
         userExamService.addUserExam(userExam);
-    }
+    }*/
+  /*@Test
+  public void findById() {
+
+     UserExam ue =  userExamService.findUEById(1);
+      System.out.println(ue.getExam().getSubject());
+  }*/
 }
