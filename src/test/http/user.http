@@ -2,6 +2,9 @@
 GET http://localhost:8080/api/users/2
 
 ###
+GET http://localhost:8080/api/users/notice
+
+###
 GET http://localhost:8080/api/manager/recommendteacher
 
 ###
@@ -20,5 +23,9 @@ Content-Type: application/json
   "executeTimes": 4
 
 }
+
+###
+GET http://localhost:8080/api/super/addmanager/6
+
 
 ###

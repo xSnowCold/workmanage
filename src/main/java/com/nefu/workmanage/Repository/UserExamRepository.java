@@ -16,4 +16,6 @@ public interface UserExamRepository extends JpaRepository<UserExam,Integer> {
 
     @Query("SELECT ue FROM UserExam ue WHERE ue.user.id=:id")
     List<UserExam> findUserExamByUserId(@Param("id") int id);
+
+
 }

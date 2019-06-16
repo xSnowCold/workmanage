@@ -6,6 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -17,23 +21,37 @@ public class SuperController {
     private UserService userService;
 
     //超管添加管理员
-    @PostMapping("/super/addmanager")
-    public Map addManager(@RequestBody User manager){
-        manager.setRole(User.roles.MANAGER);
-        return Map.of("addmanager",userService.addUser(manager));
+    @GetMapping("/super/addmanager/{id}")
+    public void addManager(@PathVariable int id, HttpServletResponse response){
+        User teacher = userService.findUser(id);
+        teacher.setRole(User.roles.MANAGER);
+        userService.modifyUser(teacher);
+        /*try {
+            response.sendRedirect("/api/super/managerList");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 
     //超管撤销管理员
-    @GetMapping("/super/delmanager/{mid}")
-    public Map delManager(@PathVariable int mid){
-       User user =  userService.findUser(mid);
+    @GetMapping("/super/delmanager/{id}")
+    public void delManager(@PathVariable int id,HttpServletResponse response){
+       User user =  userService.findUser(id);
        user.setRole(User.roles.TEACHER);
-       return Map.of("delmanager",userService.modifyUser(user));
+        userService.modifyUser(user);
+        /*try {
+            response.sendRedirect("/api/super/managerList");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
     }
 
     //管理员列表
     @GetMapping("/super/managerList")
-    public List managerList(){
-        return List.of(userService.findByRole(User.roles.MANAGER));
+    public Map managerList(){
+        List list = userService.findByRole(User.roles.MANAGER);
+        list.addAll(userService.findByRole(User.roles.TEACHER));
+
+        return Map.of("list",list,"pagination",Map.of("current",1,"pageSize",10,"total",list.size()));
     }
 }

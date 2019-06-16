@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,10 +31,11 @@ public class ExamController {
         return examService.findAExam(id);
     }
 
-    //根据状态获取监考信息
-    @GetMapping("/exams/{status}")
-    public Map getExamsByStatus(@PathVariable int status){
-        return Map.of(""+status+"",examService.findExamStatus(status));
+    //查询监考信息
+    @PostMapping("/exams/query")
+    public Map queryExams(@RequestBody Map<String,String> map){
+
+        return Map.of("result"," ");
     }
 
 

@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -41,16 +44,49 @@ public class ExamService {
         exam1 = exam;
         return examRepository.save(exam1);
     }
-    //获取考试状态分列表
-    public List<Exam> findExamStatus(int status){
-        List<Exam> list = examRepository.findAll();
-        List<Exam> un = new ArrayList<>();
-        for(Exam exam:list){
-            if(exam.getStatus()==(status)){
-              un.add(exam);
-            }
+    //查询考试
+    public List<Exam> queryExam(Map<String,String> map){
+       /* String status = map.get("status");
+        String subject = map.get("subject");
+        String beginTime = map.get("beginTime");
+        if(status!=null&&subject == null&&beginTime==null){
+            examRepository.queryExamByStatus(status);
         }
-        return un;
+        if (subject != null&&status==null&&beginTime==null){
+            examRepository.queryExamBySubject(subject);
+        }
+        if (beginTime != null&&status==null&&subject==null){
+            examRepository.queryExamByBeginTime(beginTime);
+        }
+
+
+        if(status!=null&&subject != null&&beginTime==null){
+            examRepository.queryExamByStatus(status);
+        }
+        if (subject != null&&status==null&&beginTime!=null){
+            examRepository.queryExamBySubject(subject);
+        }
+        if (beginTime != null&&status!=null&&subject==null){
+            examRepository.queryExamByBeginTime(beginTime);
+        }
+
+        if(status!=null&&subject!=null&&beginTime!=null){
+
+        }
+*/
+       /* List list = examService.queryExam(quaryList);
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        List<Exam> examList = examRepository.findAll();
+        List<Exam> un = new ArrayList<>();
+
+           *//* for (Exam exam : list) {
+                String dbBeginTime = df.format(exam.getBeginTime());
+                if (exam.getSubject().equals( subject)) {
+                    un.add(exam);
+                }
+            }*/
+
+        return null;
     }
 
     //判断同一时间地点考试是否重合

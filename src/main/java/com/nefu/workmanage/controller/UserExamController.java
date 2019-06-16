@@ -10,6 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -26,9 +29,16 @@ public class UserExamController {
     private UserExamService userExamService;
     //分配监考人员
     @PostMapping("/manager/addUserExam/{examId}")
-    public Map addUserExam(@PathVariable int examId,@RequestBody List<User> teachers){
+    public Map addUserExam(@PathVariable int examId, @RequestBody List<User> teachers,HttpServletResponse response){
 
-        return Map.of("200",userExamService.addUserExam(examService.findAExam(examId),teachers));
+      /*  try {
+            response.sendRedirect("/api/exams");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        return Map.of("result",userExamService.addUserExam(examService.findAExam(examId), teachers));
+
+
     }
     //按照考试ID查找
     @GetMapping("/userExam/{examId}")

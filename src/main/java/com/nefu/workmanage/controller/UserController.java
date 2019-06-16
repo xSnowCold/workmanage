@@ -1,5 +1,6 @@
 package com.nefu.workmanage.controller;
 
+import com.nefu.workmanage.component.Mytimer;
 import com.nefu.workmanage.entity.User;
 import com.nefu.workmanage.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,8 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private Mytimer mytimer;
 
     //查询当前用户的基本信息
     @GetMapping("/users/user")
@@ -34,5 +37,9 @@ public class UserController {
     @PostMapping("/users/updateuser")
     public Map updateUser(@RequestBody User user,HttpServletRequest request){
         return Map.of("newUser",userService.modifyUser(user));
+    }
+    @GetMapping("/users/notice")
+    public Map notice(){
+        return Map.of("notice",mytimer.notice());
     }
 }

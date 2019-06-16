@@ -50,7 +50,12 @@ public class ManagerController {
 
     //管理员添加监考信息
     @PostMapping("/manager/addexam")
-    public Map addAExam(@RequestBody Exam exam){
+    public Map addAExam(@RequestBody Exam exam,HttpServletResponse response){
+        try {
+            response.sendRedirect("/api/exams");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return Map.of("addexam",examService.addExam(exam));
     }
 
@@ -65,9 +70,13 @@ public class ManagerController {
     @GetMapping("/manager/recommendteacher")
     public Map ascExecute(){
         List<User> list = userService.ascExecuteUser();
-        return Map.of("ascExecuteUser",List.of(list.get(1),list.get(2),list.get(3),list.get(4),list.get(5)));
+        return Map.of("ascExecuteUser",list);
     }
 
-
-
+    //教师列表
+    @GetMapping("/manager/teacherList")
+    public Map teacherList(){
+        List list  = userService.findByRole(User.roles.TEACHER);
+        return Map.of("list",list,"pagination",Map.of("current",1,"pageSize",10,"total",list.size()));
+    }
 }

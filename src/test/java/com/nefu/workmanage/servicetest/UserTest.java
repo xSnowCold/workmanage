@@ -21,9 +21,10 @@ public class UserTest {
     @Test
     public void addTest(){
         User user = new User();
-        user.setAccount("super");
-        user.setPassword("222222");
-        user.setRole(User.roles.SUPER);
+        user.setName("manager1");
+        user.setAccount("manager1");
+        user.setPassword("111111");
+        user.setRole(User.roles.MANAGER);
 
         userService.addUser(user);
     }

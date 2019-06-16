@@ -51,7 +51,7 @@ public class UserService {
     }
     //修改用户
     public User modifyUser(User user){
-        User /*user1 = userRepository.findById(user.getId()).get();*/
+        User user1 = userRepository.findById(user.getId()).get();
         user1 = user;
         String password = passwordEncoder.encode(user.getPassword());
         user1.setPassword(password);

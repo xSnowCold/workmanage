@@ -40,12 +40,17 @@ public class UserExamService {
             }else {
                 map.put(""+exam1.getSubject()+"-"+userRepository.findById(teacher.getId()).get().getName()+"","信息已保存，监考冲突");
             }
+            //分配
                 UserExam userExam = new UserExam();
                 userExam.setExam(exam1);
                 userExam.setUser(teacher);
                 userExamRepository.save(userExam);
                 userExamRepository.flush();
                 System.out.println(teacher.getId());
+             //改变考试状态为已分配
+                examRepository.changExamStatus(exam.getId());
+            //改变当前教师已经执行的次数
+                userRepository.changUserExecuteTimes(teacher.getId());
 
 
         }
@@ -84,5 +89,10 @@ public class UserExamService {
                 }
             }
         return true;
+    }
+
+    //查询全部已经分配的内容
+    public List<UserExam> findAllUserExam(){
+        return userExamRepository.findAll();
     }
 }

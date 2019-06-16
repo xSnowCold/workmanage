@@ -1,0 +1,18 @@
+###
+POST http://127.0.0.1:8080/api/manager/addTask
+Content-Type: application/json
+
+{
+  "name": "ggg",
+  "detail": "aaa",
+  "startTime": "2019-06-18T20:15:49.613",
+  "endTime": "2019-06-18T20:15:49.613"
+}
+
+###
+GET http://127.0.0.1:8080/api/tasks
+
+###
+GET http://localhost:8080/api/utList/12
+
+###

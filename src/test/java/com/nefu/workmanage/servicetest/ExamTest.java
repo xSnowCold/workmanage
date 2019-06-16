@@ -41,10 +41,10 @@ public class ExamTest {
             log.debug("{}",exam);
         }
     }
-    @Test
+    /*@Test
     public void stat(){
         List<Exam> list  = examService.findExamStatus(FINISH);
         for (Exam exam:list)
             log.debug("{}",exam);
-    }
+    }*/
 }

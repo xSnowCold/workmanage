@@ -67,5 +67,26 @@ Content-Type: application/json
 }
 
 ###
+POST http://127.0.0.1:8080/api/exams/query
+Content-Type: application/json
+
+{
+  "subject": null,
+  "status": null,
+  "beginTime": "2019-06-15"
+}
+
+###
+POST http://localhost:8080/api/manager/addTask
+Content-Type: application/json
+
+
+
+
+  {"detail": 10}
+
+
+
+###
 
 
