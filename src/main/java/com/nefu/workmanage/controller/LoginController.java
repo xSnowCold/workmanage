@@ -42,6 +42,7 @@ public class LoginController {
             if(!passwordEncoder.matches(user.getPassword(),dbUser.getPassword())){
                 throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "用户名或密码错误");
             }else {
+
                 session.setAttribute("user", dbUser);
                 session.setAttribute("role", dbUser.getRole());
                 return Map.of("currentAuthority",dbUser.getRole(),"status","ok","type",dbUser.getAccount());

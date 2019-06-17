@@ -1,3 +1,87 @@
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T010325.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T010112.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T125426.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T115550.404.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T115515.404.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T115223.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T112321.500.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T111352.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T111128.500.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T111009.500.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T110903.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T110453.200.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T110241.500.json
+
+###
+
+GET http://127.0.0.1:8080/api/exams
+
+<> 2019-06-17T102908.200.json
+
+###
+
 GET http://localhost:8080/api/utList/12
 
 <> 2019-06-16T064227.200.json
@@ -342,154 +426,6 @@ Content-Type: application/json
     {"id": 10},{"id": 8},{"id": 2}
 
   ]
-
-###
-
-POST http://localhost:8080/api/manager/addUserExam/1
-Content-Type: application/json
-
-   [
-
-    {"id": 10},{"id": 8},{"id": 2}
-
-  ]
-
-<> 2019-06-16T042322.405.json
-
-###
-
-POST http://localhost:8080/api/manager/addUserExam/1
-Content-Type: application/json
-
-   [
-
-    {"id": 10},{"id": 8},{"id": 2}
-
-  ]
-
-###
-
-POST http://localhost:8080/api/manager/addUserExam/1
-Content-Type: application/json
-
-   [
-
-    {"id": 10},{"id": 8},{"id": 2}
-
-  ]
-
-<> 2019-06-16T041456.200.json
-
-###
-
-POST http://localhost:8080/api/manager/addUserExam/1
-Content-Type: application/json
-
-   [
-
-    {"id": 10},{"id": 8},{"id": 2}
-
-  ]
-
-###
-
-POST http://localhost:8080/api/manager/addUserExam/1
-Content-Type: application/json
-
-   [
-
-    {"id": 10},{"id": 8},{"id": 2}
-
-  ]
-
-###
-
-POST http://127.0.0.1:8080/api/exams/query
-Content-Type: application/json
-
-{
-  "subject": "职业",
-  "status": null,
-  "beginTime": null
-}
-
-<> 2019-06-16T024150.200.json
-
-###
-
-POST http://127.0.0.1:8080/api/exams/query
-Content-Type: application/json
-
-{
-  "subject": "职业",
-  "status": 1,
-  "beginTime": ""
-}
-
-<> 2019-06-16T024106.200.json
-
-###
-
-POST http://127.0.0.1:8080/api/exams/query
-Content-Type: application/json
-
-{
-  "subject": "职业",
-  "status": 1,
-  "beginTime": ""
-}
-
-<> 2019-06-16T022938.500.json
-
-###
-
-POST http://127.0.0.1:8080/api/exams/query
-Content-Type: application/json
-
-{
-  "subject": "职业",
-  "status": null,
-  "beginTime": ""
-}
-
-<> 2019-06-16T022926.500.json
-
-###
-
-POST http://127.0.0.1:8080/api/exams/query
-Content-Type: application/json
-
-{
-  "subject": "职业",
-  "status": "",
-  "beginTime": ""
-}
-
-<> 2019-06-16T022750.500.json
-
-###
-
-GET http://localhost:8080/api/users/notice
-
-<> 2019-06-16T124151.200.json
-
-###
-
-GET http://localhost:8080/api/users/notice
-
-<> 2019-06-16T121432.200.json
-
-###
-
-GET http://localhost:8080/api/users/notice
-
-<> 2019-06-16T120150.200.json
-
-###
-
-GET http://127.0.0.1:8080/api/userExam/2
-
-<> 2019-06-15T091355.200.json
 
 ###
 

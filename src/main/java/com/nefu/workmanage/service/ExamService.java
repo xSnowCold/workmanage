@@ -44,49 +44,10 @@ public class ExamService {
         exam1 = exam;
         return examRepository.save(exam1);
     }
-    //查询考试
-    public List<Exam> queryExam(Map<String,String> map){
-       /* String status = map.get("status");
-        String subject = map.get("subject");
-        String beginTime = map.get("beginTime");
-        if(status!=null&&subject == null&&beginTime==null){
-            examRepository.queryExamByStatus(status);
-        }
-        if (subject != null&&status==null&&beginTime==null){
-            examRepository.queryExamBySubject(subject);
-        }
-        if (beginTime != null&&status==null&&subject==null){
-            examRepository.queryExamByBeginTime(beginTime);
-        }
+    //按名称查询考试
+    public List<Exam> queryExam(String subject){
 
-
-        if(status!=null&&subject != null&&beginTime==null){
-            examRepository.queryExamByStatus(status);
-        }
-        if (subject != null&&status==null&&beginTime!=null){
-            examRepository.queryExamBySubject(subject);
-        }
-        if (beginTime != null&&status!=null&&subject==null){
-            examRepository.queryExamByBeginTime(beginTime);
-        }
-
-        if(status!=null&&subject!=null&&beginTime!=null){
-
-        }
-*/
-       /* List list = examService.queryExam(quaryList);
-        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        List<Exam> examList = examRepository.findAll();
-        List<Exam> un = new ArrayList<>();
-
-           *//* for (Exam exam : list) {
-                String dbBeginTime = df.format(exam.getBeginTime());
-                if (exam.getSubject().equals( subject)) {
-                    un.add(exam);
-                }
-            }*/
-
-        return null;
+        return examRepository.queryExamBySubject(subject);
     }
 
     //判断同一时间地点考试是否重合

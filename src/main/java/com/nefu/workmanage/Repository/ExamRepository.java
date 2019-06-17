@@ -17,12 +17,13 @@ public interface ExamRepository extends JpaRepository<Exam,Integer> {
     @Query(value = "update Exam e set e.status = 1 where e.id = :id")
     void changExamStatus(@Param("id") int id);
 
-   /* @Query("SELECT e FROM Exam e WHERE e.status=:status")
+    @Query("SELECT e FROM Exam e WHERE e.status=:status")
     List<Exam> queryExamByStatus(@Param("status") String status);
 
-    @Query("SELECT e FROM Exam e WHERE e.status=:status")
+    @Query("SELECT e FROM Exam e WHERE e.subject LIKE CONCAT('%',:subject,'%')")
     List<Exam> queryExamBySubject(@Param("subject") String subject);
 
-    @Query("SELECT e FROM Exam e WHERE e.beginTime=:beginTime")
-    List<Exam> queryExamByBeginTime(@Param("beginTime") String beginTime);*/
+
+
+
 }
